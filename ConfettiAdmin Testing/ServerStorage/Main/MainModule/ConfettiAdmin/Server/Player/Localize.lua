@@ -2,7 +2,7 @@
 local Module = {}
 
 function Module:Initilize(shared, Player)
-	local Clone = shared.SharedAssets:WaitForChild("🎊")
+	local Clone = shared:GetAsset("🎊")
 	
 	shared.Players[Player].Gui = Clone
 	
