@@ -4,13 +4,11 @@ local Module = {}
 function Module:Initilize(shared, Frame, Data)
 	local Example = Frame:WaitForChild("Example")
 	
-	for _, Script in shared.SharedAssets:WaitForChild("VoidScripts"):GetChildren() do
+	for _, Script in shared:GetAsset("VoidScripts"):GetChildren() do
 		local Clone = Example:Clone()
 		
 		Clone.Activated:Connect(function()
 			shared.Remotes.Loadstring:Fire(true, "Void", Clone.Name)
-			
-			shared:Print(shared.Remotes.Loadstring)
 		end)
 		
 		Clone.Name = Script.Name
