@@ -2,7 +2,7 @@
 local Module = {}
 
 function Module:Initilize(shared, Name, Data)
-	local UiElements = shared.SharedAssets:WaitForChild("UiElements", 1/3)
+	local UiElements = shared:GetAsset("UiElements", 1/3)
 	
 	if UiElements then
 		local Clone = UiElements:WaitForChild(Name, 1/3)
