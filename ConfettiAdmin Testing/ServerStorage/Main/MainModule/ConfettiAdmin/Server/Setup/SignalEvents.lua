@@ -11,8 +11,8 @@ local Remotes = {
 local ScriptEvent = require(script:WaitForChild("ScriptEvent"))
 
 function Module:Initilize(shared)
-	local Warp = require(shared.SharedAssets:WaitForChild("Warp"))
-	local LemonSignal = require(shared.SharedAssets:WaitForChild("LemonSignal"))
+	local Warp = require(shared:GetAsset("Warp"))
+	local LemonSignal = require(shared:GetAsset("LemonSignal"))
 	
 	shared.Warp = Warp
 	shared.LemonSignal = LemonSignal
